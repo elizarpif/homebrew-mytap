@@ -18,8 +18,12 @@ class TryRuby < Formula
     system "./configure", *std_configure_args, "--disable-silent-rules"
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
   end
-  
-  def cav
+
+  def caveats
+    <<-EOS.undent
+      You have try_rube formula!
+    EOS
+  end
 
   test do
     # `test do` will create, run in and delete a temporary directory.
